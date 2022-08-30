@@ -1,6 +1,5 @@
+number = 3
 
-rounds = int(input("How many greetings: "))
-finished_rounds = 0
-while finished_rounds < rounds:
-    print("Good morning")
-    finished_rounds = finished_rounds + 1
+while number <= 1000:
+    print(f"{number}")
+    number = number + 3
