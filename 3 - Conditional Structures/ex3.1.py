@@ -1,5 +1,3 @@
-import sys
-
 length = float(input("Please enter the length of the zander in cm: "))
 
 if length < 42:
@@ -8,5 +6,3 @@ if length < 42:
 
 if length >= 42:
     print("Zander fulfills the limit size.")
-
-sys.exit(0)

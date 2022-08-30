@@ -1,5 +1,3 @@
-import sys
-
 cabin_str = input("Please enter your cabin class: ")
 cabin = cabin_str
 
@@ -13,5 +11,3 @@ elif "C" in cabin:
     print("Windowless cabin below the car deck.")
 else:
     print("Invalid cabin class.")
-
-sys.exit(0)

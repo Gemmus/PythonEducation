@@ -1,5 +1,3 @@
-import sys
-
 gender_str = input("Please enter your biological gender (male or female): ")
 gender = gender_str
 
@@ -23,5 +21,3 @@ elif "male" in gender:
 
 else:
     print("Not valid biological gender.")
-
-sys.exit(0)

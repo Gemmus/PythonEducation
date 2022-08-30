@@ -1,6 +1,4 @@
-import sys
 import random
-
 a = random.randrange(0, 10)
 b = random.randrange(0, 10)
 c = random.randrange(0, 10)
@@ -11,5 +9,3 @@ d = random.randrange(1, 7)
 e = random.randrange(1, 7)
 f = random.randrange(1, 7)
 print("You random 4-digit code is: ", c, d, e, f)
-
-sys.exit(0)
