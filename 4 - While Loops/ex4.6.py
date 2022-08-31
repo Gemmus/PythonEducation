@@ -12,7 +12,6 @@
 # n: total number of points that fall inside circle A.
 # n/N≈π/4, therefore π≈4n/N.
 
-# Write a program that asks how many random points to generate and at the end prints out the approximation of pi.
 
 import sys
 import random
