@@ -1,3 +1,5 @@
+# Write a program that asks for a year and notifies whether the input year is a leap year.
+
 year = int(input("Please enter the year of your choice: "))
 
 if year % 4 == 0:

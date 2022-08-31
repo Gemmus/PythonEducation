@@ -1,3 +1,6 @@
+# Asks the user to enter the cabin class of a cruise ship and then prints out a written description.
+# If the user enters an invalid cabin class, the program outputs an error message "Invalid cabin class".
+
 cabin_str = input("Please enter your cabin class: ")
 cabin = cabin_str
 

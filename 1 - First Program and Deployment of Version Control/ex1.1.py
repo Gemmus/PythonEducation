@@ -1,6 +1,6 @@
-import sys
+# Write a program that greets you by your own name.
 
-print("Hello, world!")
+import sys
 
 name = input("Please tell me your name: ")
 print("Hello, " + name + "!")

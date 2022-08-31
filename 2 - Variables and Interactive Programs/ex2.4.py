@@ -1,3 +1,6 @@
+# Write a program that asks for three integer numbers.
+# The program prints out the sum, product, and average of the numbers.
+
 num1_str = input("Please insert the first integer number of your choice: ")
 num2_str = input("Please insert the second integer number of the your choice: ")
 num3_str = input("Please insert the third integer number of the your choice: ")

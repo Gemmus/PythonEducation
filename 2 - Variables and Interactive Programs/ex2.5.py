@@ -1,3 +1,6 @@
+# Write a program that asks a mass in medieval units: talents, pounds, and lots.
+# The program converts the input to full kilograms and grams and outputs the result to the user.
+
 talent_str = input("Please enter talents: ")
 pound_str = input("Please enter pounds: ")
 lot_str = input("Please enter lots: ")

@@ -1,3 +1,6 @@
+# Write a program that asks to enter numbers until they enter an empty string to quit.
+# Finally, the program prints out the smallest and largest number from the numbers it received.
+
 import sys
 
 list1 = []

@@ -1,3 +1,6 @@
+# Write a program that converts inches to centimeters until the user inputs a negative value.
+# Then the program ends.
+
 inch = float(input("Please enter the length in inch: "))
 
 while inch >= 0:
