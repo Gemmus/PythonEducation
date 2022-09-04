@@ -27,6 +27,6 @@ while a < N:
     if x**2+y**2 < 1:
         n = n + 1
 
-print(f"The estimated π value is: ", {(4*n)/N})
+print(f"The estimated π value is: ", (4*n)/N)
 
 sys.exit(0)
