@@ -8,5 +8,7 @@ def litre(first):
 
 
 gallon = float(input("Please enter the volume in gallons: "))
-result = litre(gallon)
-print(f"The entered volume in gallon is {result:.2f} in litre.")
+while gallon > 0:
+    result = litre(gallon)
+    print(f"The entered volume in gallon is {result:.2f} in litre.")
+    gallon = float(input("Please enter the volume in gallons: "))
