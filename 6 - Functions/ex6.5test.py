@@ -7,12 +7,12 @@
 
 def func(integers):
     print("The original list contains number: ", integers)
-    list2 = []
+    list3 = []
     for integer in integers:
-        if integer % 2 == 0:
-            even = integer
-            list2.append(even)
-    print("The even numbers from the original list: ", list2)
+        if integer % 2 != 0:
+            uneven = integer
+            list3.append(uneven)
+    print("The uneven numbers from the original list: ", list3)
     return
 
 
