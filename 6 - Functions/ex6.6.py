@@ -9,7 +9,7 @@ import math
 
 
 def func(first, second):
-    unit = (second * 4)/(math.pi*(first/100)**2)
+    unit = (second*4)/(math.pi*(first/100)**2)
     print(f"{unit:.2f} euro/m^2")
     return unit
 
