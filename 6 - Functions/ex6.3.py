@@ -3,7 +3,7 @@
 # The conversion must be done by using the function. Conversions continue until the user inputs a negative value.
 
 def litre(first):
-    result = first*3.7854
+    result = first * 3.7854
     return result
 
 
