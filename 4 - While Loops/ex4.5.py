@@ -13,7 +13,7 @@ while x < 5:
     if username == "python" and password == "rules":
         print("Welcome.")
         sys.exit(0)
-    x = x + 1
+    x += 1
 
 if x == 5:
     print("Access denied.")
