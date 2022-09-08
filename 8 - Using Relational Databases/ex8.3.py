@@ -15,3 +15,4 @@ yhteys = mysql.connector.connect(
          password='pAs5w_0rD',
          autocommit=True
          )
+
