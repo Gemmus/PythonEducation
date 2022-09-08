@@ -5,17 +5,17 @@
 # Write a main program where you create a new car (registration number ABC-123, maximum speed 142 km/h).
 # Finally, print out all the properties of the new car.
 
-class Car:
-    def __init__(self, plate, maximum, current=0, distance=0):
+class Vehicle:
+    def __init__(self, plate, maximum_speed, current_speed=0, distance=0):
         self.plate = plate
-        self.maximum = maximum
-        self.current = current
+        self.maximum_speed = maximum_speed
+        self.current_speed = current_speed
         self.distance = distance
 
 
-car = Car("ABC-123", 142)
+car = Vehicle("ABC-123", 142)
 
 
 print(f"""
-The car with the registration plate {car.plate:s} has the maximum speed of {car.maximum:d} km/h.
-Its current speed is {car.current:d} km/h and has travelled {car.distance:d} km.""")
+The car with the registration plate {car.plate:s} has the maximum speed of {car.maximum_speed:d} km/h.
+Its current speed is {car.current_speed:d} km/h and has travelled {car.distance:d} km.""")
