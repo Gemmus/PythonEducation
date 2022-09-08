@@ -4,3 +4,18 @@
 # The current speed and travelled distance of a new car must be automatically set to zero.
 # Write a main program where you create a new car (registration number ABC-123, maximum speed 142 km/h).
 # Finally, print out all the properties of the new car.
+
+class Car:
+    def __init__(self, plate, maximum, current=0, distance=0):
+        self.plate = plate
+        self.maximum = maximum
+        self.current = current
+        self.distance = distance
+
+
+car = Car("ABC-123", 142)
+
+
+print(f"""
+The car with the registration plate {car.plate:s} has the maximum speed of {car.maximum:d} km/h.
+Its current speed is {car.current:d} km/h and has travelled {car.distance:d} km.""")
