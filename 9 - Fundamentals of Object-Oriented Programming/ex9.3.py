@@ -10,32 +10,19 @@ class Vehicle:
         self.current_speed = current_speed
         self.distance = distance
 
-    def change_of_speed(self, change):
-        self.current_speed += change
-        if self.current_speed < 0:
-            self.current_speed = 0
-        elif self.current_speed > self.maximum_speed:
-            self.current_speed = self.maximum_speed
-
-    def number_of_hours(self, hour):
-        self.distance += hour
+    def number_of_hours(self, hour=0):
+        self.distance = self.distance + hour * 60
 
 
+car = Vehicle("ABC-123", 142, 60, 2000)
+car.number_of_hours(+5)     # +300km
+print(f"{car.distance:d}")
+car.number_of_hours(+9)     # +540 km
+print(f"{car.distance:d}")
+car.number_of_hours(+200)     # +12000 km
+print(f"{car.distance:d}")
 
-
-car = Vehicle("ABC-123", 142)
-car.change_of_speed(+30)
-print(f"{car.current_speed:d}")
-car.change_of_speed(+70)
-print(f"{car.current_speed:d}")
-car.change_of_speed(+50)
 
 print(f"""
 The car with the registration plate {car.plate:s} has the maximum speed of {car.maximum_speed:d} km/h.
-Its current speed is {car.current_speed:d} km/h.""")
-
-car.change_of_speed(-200)
-
-print(f"""
-The car with the registration plate {car.plate:s} has the maximum speed of {car.maximum_speed:d} km/h.
-Its current speed is {car.current_speed:d} km/h.""")
+Its current speed is {car.current_speed:d} km/h and has travelled {car.distance:d} km.""")
