@@ -4,3 +4,14 @@
 # Calculate the distance using the geopy library: https://geopy.readthedocs.io/en/stable/.
 # Install the library by selecting View / Tool Windows / Python Packages in your PyCharm IDE,
 # write geopy into the search field and finish the installation.
+
+import mysql.connector
+
+yhteys = mysql.connector.connect(
+         host='127.0.0.1',
+         port=3306,
+         database='people',
+         user='dbuser',
+         password='pAs5w_0rD',
+         autocommit=True
+         )
