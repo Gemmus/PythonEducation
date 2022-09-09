@@ -1,7 +1,7 @@
 # Write a program that asks for the biological gender and hemoglobin value (g/l).
 # The program then notifies the user if the hemoglobin value is low, normal or high.
 
-gender_str = input("Please enter your biological gender (male or female): ")
+gender_str = input("Please enter your biological gender (male or female): ").lower()
 gender = gender_str
 
 if gender == "female":

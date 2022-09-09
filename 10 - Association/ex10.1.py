@@ -7,3 +7,4 @@
 # Test the class by creating an elevator in the main program,
 # tell it to move to a floor of your choice and then back to the bottom floor.
 
+class Elevator:

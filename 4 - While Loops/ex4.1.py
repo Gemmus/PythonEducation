@@ -3,5 +3,10 @@
 number = 3
 
 while number <= 1000:
-    print(f"{number}")
+    print(number)
     number += 3
+
+
+# with for loop:
+# for number in range(3, 1000, 3):
+#    print(number)
