@@ -18,4 +18,4 @@ car = Vehicle("ABC-123", 142)
 
 print(f"""
 The car with the registration plate {car.plate:s} has the maximum speed of {car.maximum_speed:d} km/h.
-Its current speed is {car.current_speed:d} km/h and has travelled {car.distance:d} km.""")
+The current speed is {car.current_speed:d} km/h and has travelled {car.distance:d} km.""")

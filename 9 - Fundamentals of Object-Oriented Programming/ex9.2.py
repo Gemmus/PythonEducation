@@ -34,10 +34,10 @@ car.change_of_speed(+50)
 
 print(f"""
 The car with the registration plate {car.plate:s} has the maximum speed of {car.maximum_speed:d} km/h.
-Its current speed is {car.current_speed:d} km/h.""")
+The current speed is {car.current_speed:d} km/h.""")
 
 car.change_of_speed(-200)
 
 print(f"""
 The car with the registration plate {car.plate:s} has the maximum speed of {car.maximum_speed:d} km/h.
-Its current speed is {car.current_speed:d} km/h.""")
+The current speed is {car.current_speed:d} km/h.""")

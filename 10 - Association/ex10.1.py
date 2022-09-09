@@ -8,3 +8,4 @@
 # tell it to move to a floor of your choice and then back to the bottom floor.
 
 class Elevator:
+    def __init__(self, ):
