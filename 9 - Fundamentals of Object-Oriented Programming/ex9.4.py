@@ -17,12 +17,12 @@ import random
 
 
 class Race:
-    def __init__(self, plate, current_speed, distance=0):
+    def __init__(self, plate, current_speed, kilometer=0):
         self.plate = plate
         self.current_speed = current_speed
-        self.odometer = distance
+        self.odometer = kilometer
 
-    def Acceleration(self, change):
+    def acceleration(self, change):
         self.current_speed += change
         if self.current_speed < 100:
             self.current_speed = 100
@@ -30,35 +30,36 @@ class Race:
             self.current_speed = 200
         return self.current_speed
 
-    def GetSpeed(self):
+    def get_speed(self):
         return self.current_speed
 
-    def Drive(self, distance):
-        self.odometer += distance
+    def path(self, path):
+        self.odometer += path
         return self.odometer
 
 
-
-# main program:
-list1 = []
+# main programme:
+car_list = []
 a = 1
 for i in range(10):
     b = int(random.uniform(100, 200))
     car = Race(a, b)
-#    print(car.GetSpeed)
- #   print(car.plate)
-    list1.append(car)
+    car_list.append(car)
     a += 1
+#    print(car.current_speed)
+#    print(car.plate)
 
 race_over = False
-#print (f"{Race.created} have been created so far.")
-while not(race_over):
-    for car in list1:
-        acceleration = int(random.uniform(-10, 15))
+circle = 1
+while not race_over:
+    print("\nRound " + str(circle) + ":")
+    for car in car_list:
+        change_of_speed = int(random.uniform(-10, +15))
 #        print("starting speed: " + str(car.GetSpeed()))
-        speed = car.Acceleration(acceleration)
+        speed = car.acceleration(change_of_speed)
 #        print("accelerated speed: " + str(speed))
-        distance = car.Drive(speed)
-        print("car " + str(car.plate) + " odometer: " + str(distance))
+        distance = car.path(speed)
+        print("[ABC-" + str(car.plate) + "] speed: " + str(speed) + " km/h  distance: " + str(distance) + " km")
         if distance >= 10000:
             race_over = True
+    circle += 1
