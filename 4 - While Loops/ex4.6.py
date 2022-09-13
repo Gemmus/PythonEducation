@@ -8,7 +8,7 @@
 # the fraction of the area of circle A compared to the area of square B. (πr^2/4 = π/4)
 
 # Generate random points (N = 10^6) inside square B.
-# Each is tested if it resides inside circle A. (x2+y^2<1)
+# Each is tested if it resides inside circle A. (x^2+y^2<1)
 # n: total number of points that fall inside circle A.
 # n/N≈π/4, therefore π≈4n/N.
 
