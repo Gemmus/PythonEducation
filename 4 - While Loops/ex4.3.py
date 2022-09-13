@@ -17,6 +17,8 @@ while num != "":
         break
     list1.append(num)
 
+# list1.sort()
+# print(list1)
 print("Your smallest number is: " + str(min(list1)) + " and your largest is: " + str(max(list1)))
 
 sys.exit(0)
