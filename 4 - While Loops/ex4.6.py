@@ -16,17 +16,24 @@
 import sys
 import random
 
-N = int(input("How many random numbers shall be generated? "))
-n = 0
-a = 0
+try:
+    N = float(input("How many random numbers shall be generated? "))
+    if N > 0:
+        n = 0
+        a = 0
 
-while a < N:
-    x = round(random.uniform(-1, 1), 6)
-    y = round(random.uniform(-1, 1), 6)
-    a += 1
-    if x**2+y**2 < 1:
-        n += 1
+        while a < N:
+            x = round(random.uniform(-1, 1), 6)
+            y = round(random.uniform(-1, 1), 6)
+            a += 1
+            if x**2+y**2 < 1:
+                n += 1
 
-print(f"The estimated π value is: ", (4*n)/N)
+        print(f"The estimated π value is: ", (4*n)/N)
+    else:
+        print("Generated number can neither be negative nor zero.")
+
+except ValueError:
+    print("Input must be a number.")
 
 sys.exit(0)

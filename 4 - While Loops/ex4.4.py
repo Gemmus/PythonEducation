@@ -5,14 +5,18 @@
 
 import random
 
-a = random.randint(1, 10)
-# print(a)
-guess = int(input("Please guess my chosen number: "))
+try:
+    a = random.randint(1, 10)
+    print(a)
+    guess = int(input("Please guess my chosen number: "))
 
-while guess != a:
-    if guess < a:
-        guess = int(input("Too low. Guess again:"))
-    if guess > a:
-        guess = int(input("Too high. Guess again:"))
-else:
-    print("Correct.")
+    while guess != a:
+        if guess < a:
+            guess = int(input("Too low. Guess again:"))
+        if guess > a:
+            guess = int(input("Too high. Guess again:"))
+    else:
+        print("Correct.")
+
+except ValueError:
+    print("That's not a number. I quit.")

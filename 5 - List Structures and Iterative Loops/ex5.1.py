@@ -4,10 +4,15 @@
 import random
 
 dice_numbers = []
-piece = int(input("How many dices should be rolled? "))
+try:
+    piece = int(input("How many dices should be rolled? "))
 
-for n in range(piece):
-    a = random.randint(1, 6)
-    dice_numbers.append(a)
+    for n in range(piece):
+        a = random.randint(1, 6)
+        # print(a)
+        dice_numbers.append(a)
 
-print(f"The sum of the numbers is: {sum(dice_numbers)}")
+    print(f"The sum of the numbers is: {sum(dice_numbers)}")
+
+except ValueError:
+    print("Invalid input.")
