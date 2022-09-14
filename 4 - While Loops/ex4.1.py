@@ -5,7 +5,7 @@ while number <= 1000:
     print(number)
     number += 3
 
-# or
+# or:
 number = 1
 while number <= 1000:
     if number % 3 == 0:
