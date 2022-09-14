@@ -15,21 +15,21 @@ Please enter A, if you wish to enter a new airport
 \t\tor C, iy you wish to quit: 
 """).upper()
 
-while action.upper() != "C":
-    if action.upper() == "A":
-        code = input("Please enter the ICAO code of the airport: ")
+while action != "C":
+    if action == "A":
+        code = input("Please enter the ICAO code of the airport: ").upper()
         name = input("Please enter the name of the airport: ")
-        data.update({code.upper(): name})
-    elif action.upper() == "B":
-        code = input("Please enter the ICAO code of the airport: ")
-        if code.upper() in data:
-            print(f"For the ICAO code of {code.upper()} the corresponding airport is {data[code.upper()]}.")
+        data.update({code: name})
+    elif action == "B":
+        code = input("Please enter the ICAO code of the airport: ").upper()
+        if code in data:
+            print(f"For the ICAO code of {code} the corresponding airport is {data[code]}.")
 #        print(f"For the ICAO code of {code} the corresponding airport is {data["EGLL"]}.")
     action = input("""
     Please enter A, if you wish to enter a new airport
-              or B, if you wish to fetch information of an existing airport
-              or C, iy you wish to quit:
-    """)
+    \t\tor B, if you wish to fetch information of an existing airport
+    \t\tor C, iy you wish to quit:
+    """).upper()
 else:
     print("You chose to quit. Have a safe flight!")
 
