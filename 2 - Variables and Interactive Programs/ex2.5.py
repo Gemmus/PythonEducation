@@ -1,14 +1,17 @@
 # Write a program that asks a mass in medieval units: talents, pounds, and lots.
 # The program converts the input to full kilograms and grams and outputs the result to the user.
 
-talent_str = input("Please enter talents: ")
-pound_str = input("Please enter pounds: ")
-lot_str = input("Please enter lots: ")
-talent = float(talent_str)
-pound = float(pound_str)
-lot = float(lot_str)
-grams = (talent*20*32*13.3)+(pound*32*13.3)+(13.3*lot)
-kilograms = grams/1000
-grams_left = grams % 1000
+try:
+    talent = float(input("Please enter talents: "))
+    pound = float(input("Please enter pounds: "))
+    lot = float(input("Please enter lots: "))
+    if talent > 0 and pound > 0 and lot > 0:
+        grams = (talent*20*32*13.3)+(pound*32*13.3)+(13.3*lot)
+        kilograms = grams/1000
+        grams_left = grams % 1000
+        print(f"The weight in modern unit is: {kilograms:2f} kg and {grams_left:2f} grams.")
+    else:
+        print("Value cannot be negative.")
 
-print("The weight in modern unit is: " + str(int(kilograms)) + " kg and " + str(int(grams_left)) + " grams")
+except ValueError:
+    print("Invalid input.")
