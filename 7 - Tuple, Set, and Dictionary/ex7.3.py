@@ -24,7 +24,6 @@ while action != "C":
         code = input("Please enter the ICAO code of the airport: ").upper()
         if code in data:
             print(f"For the ICAO code of {code} the corresponding airport is {data[code]}.")
-#        print(f"For the ICAO code of {code} the corresponding airport is {data["EGLL"]}.")
     action = input("""
     Please enter A, if you wish to enter a new airport
     \t\tor B, if you wish to fetch information of an existing airport
