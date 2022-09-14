@@ -11,9 +11,9 @@ data = {"EFHK": "Helsinki-Vantaa", "EGLL": "Heathrow", "EGKK": "Gatwick", "EGGW"
 
 action = input("""
 Please enter A, if you wish to enter a new airport
-          or B, if you wish to fetch information of an existing airport
-          or C, iy you wish to quit: 
-""")
+\t\tor B, if you wish to fetch information of an existing airport
+\t\tor C, iy you wish to quit: 
+""").upper()
 
 while action.upper() != "C":
     if action.upper() == "A":
