@@ -13,5 +13,5 @@ digits = {
 
 output = ""
 for i in phone:
-    output += digits.get(i, "!") + " "
+    output += digits.get(i, "!") + " "      # !: if i not available from dictionary, replaces with "!"
 print(output)
