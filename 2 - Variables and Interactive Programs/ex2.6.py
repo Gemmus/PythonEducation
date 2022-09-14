@@ -3,9 +3,9 @@
 #       a 4-digit code where each number is between 1 and 6.
 
 import random
-a = random.randrange(0, 10)
-b = random.randrange(0, 10)
-c = random.randrange(0, 10)
+a = random.randint(0, 9)
+b = random.randint(0, 9)
+c = random.randint(0, 9)
 print("Your random 3-digit code is: ", a, b, c)
 
 c = random.randrange(1, 7)
