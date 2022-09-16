@@ -6,7 +6,7 @@
 import mysql.connector
 
 
-def getNameAndLocation(icao):
+def name_location(icao):
     cursor = connection.cursor()
     cursor.execute("SELECT name, municipality, gps_code FROM flying_around WHERE gps_code='" + icao + "'")
     result = cursor.fetchall()
@@ -27,4 +27,4 @@ connection = mysql.connector.connect(
          )
 
 code = input("Please enter the ICAO code of the airport: ").upper()
-getNameAndLocation(code)
+name_location(code)

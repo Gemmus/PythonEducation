@@ -5,7 +5,7 @@
 import mysql.connector
 
 
-def getTypeAndName(code):
+def type_name(code):
     cursor = connection.cursor()
     cursor.execute("SELECT type, name, iso_country FROM flying_around "
                    "WHERE iso_country='" + code + "' ORDER BY type DESC")
@@ -26,4 +26,4 @@ connection = mysql.connector.connect(
          )
 
 area_code = input("Please enter the area code of the airport: ").upper()
-getTypeAndName(area_code)
+type_name(area_code)

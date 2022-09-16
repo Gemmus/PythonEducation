@@ -7,7 +7,7 @@ import mysql.connector
 from geopy.distance import geodesic
 
 
-def howFar(icao):
+def how_far(icao):
     cursor = connection.cursor()
     cursor.execute("SELECT latitude_deg, longitude_deg, gps_code FROM flying_around WHERE gps_code='" + icao + "'")
     result = cursor.fetchall()
@@ -27,9 +27,9 @@ connection = mysql.connector.connect(
          )
 
 code1 = input("Please enter the ICAO code of the airport: ").upper()
-location1 = howFar(code1)
+location1 = how_far(code1)
 code2 = input("Please enter the ICAO code of the airport: ").upper()
-location2 = howFar(code2)
+location2 = how_far(code2)
 
 distance = geodesic(location1, location2).km
 print(f"The distance between the two entered airports is: {distance:.2f}km.")
