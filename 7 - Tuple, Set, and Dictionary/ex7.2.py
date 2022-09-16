@@ -5,7 +5,7 @@
 # Use the set data structure to store the names.
 
 names = set([])
-name = str(input("Please enter a name or press enter to quit: "))
+name = input("Please enter a name or press enter to quit: ")
 
 while name != "":
     if name in names:
