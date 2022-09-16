@@ -13,5 +13,5 @@ while number <= 1000:
     number += 1
 
 # or with for loop:
-# for number in range(3, 1000, 3):
+# for number in range(3, 1001, 3):
 #    print(number)

@@ -19,8 +19,7 @@ import random
 try:
     N = float(input("How many random numbers shall be generated? "))
     if N > 0:
-        n = 0
-        a = 0
+        n = a = 0
 
         while a < N:
             x = round(random.uniform(-1, 1), 6)
