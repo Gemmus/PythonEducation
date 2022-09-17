@@ -3,16 +3,18 @@
 # The difference to the last exercise is that the dice rolling in the main program continues
 # until the program gets the maximum number on the dice, which is asked from the user at the beginning.
 
+try:
+    def roll(largest):
+        import random
+        dice = random.randint(1, largest)
+        return dice
 
-def roll(side):
-    import random
-    dice = random.randint(1, side)
-    return dice
-
-
-side = int(input("How many sides does the dice have? "))
-number = roll(side)
-print(number)
-while number != side:
+    side = int(input("How many sides does the dice have? "))
     number = roll(side)
     print(number)
+    while number != side:
+        number = roll(side)
+        print(number)
+
+except ValueError:
+    print("Invalid input.")
