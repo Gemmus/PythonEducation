@@ -9,7 +9,7 @@ try:
     seasons = ("spring", "summer", "autumn", "winter")
     month = int(input("Please enter the number of a month (1-12): "))
 
-    if month >= 1:
+    if 1 <= month <= 12:
         print(calendar.month_name[month])
         if month in (12, 1, 2):
             print(f"It is {seasons[-1]} during that month.")
@@ -19,7 +19,6 @@ try:
             print(f"It is {seasons[1]} during that month.")
         else:
             print(f"It is {seasons[2]} during that month.")
-
     else:
         print("Invalid month.")
 
