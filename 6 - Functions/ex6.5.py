@@ -6,13 +6,12 @@
 
 
 def func(integers):
-    print("The original list contains number: ", integers)
     list2 = []
     for integer in integers:
         if integer % 2 == 0:
             even = integer
             list2.append(even)
-    print("The even numbers from the original list: ", list2)
+    print("The even numbers from the original list:", list2)
     return
 
 
