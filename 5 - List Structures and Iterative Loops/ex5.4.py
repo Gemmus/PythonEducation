@@ -3,7 +3,7 @@
 
 city_list = []
 
-for n in range(0, 5):
+for i in range(5):
     city = input("Please enter the name of a city: ")
     city_list.append(city)
 
@@ -12,5 +12,5 @@ for n in range(0, 5):
 
 # or
 
-for n in city_list:
-    print(n)
+for c in city_list:
+    print(c)
