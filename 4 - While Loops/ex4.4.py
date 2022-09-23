@@ -7,7 +7,7 @@ import random
 
 try:
     a = random.randint(1, 10)
-    print(a)
+#    print(a)
     guess = int(input("Please guess my chosen number: "))
 
     while guess != a:
