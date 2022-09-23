@@ -14,7 +14,7 @@ try:
         print(f"The entered volume in gallon is {result:.2f} in litre.")
         gallon = float(input("Please enter the volume in gallons: "))
     else:
-        print("Invalid input.")
+        print("Bye.")
 
 except ValueError:
     print("Invalid input.")
