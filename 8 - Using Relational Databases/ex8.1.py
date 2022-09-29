@@ -8,12 +8,12 @@ import mysql.connector
 
 def name_location(icao):
     cursor = connection.cursor()
-    cursor.execute("SELECT name, municipality, gps_code FROM flying_around WHERE gps_code='" + icao + "'")
+    cursor.execute("SELECT ident, name, municipality FROM flying_around WHERE ident='" + icao + "'")
     result = cursor.fetchall()
 #    print(result)
     if cursor.rowcount > 0:
         for row in result:
-            print(f"The name of the airport is: {row[0]} and it locates in: {row[1]}.")
+            print(f"The name of the airport is: {row[1]} and is located in: {row[2]}.")
     return
 
 

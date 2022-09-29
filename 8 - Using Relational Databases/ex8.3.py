@@ -9,11 +9,11 @@ from geopy.distance import geodesic
 
 def how_far(icao):
     cursor = connection.cursor()
-    cursor.execute("SELECT latitude_deg, longitude_deg, gps_code FROM flying_around WHERE gps_code='" + icao + "'")
+    cursor.execute("SELECT ident, latitude_deg, longitude_deg FROM flying_around WHERE ident='" + icao + "'")
     result = cursor.fetchall()
     if cursor.rowcount > 0:
         for row in result:
-            location = (row[0], row[1])
+            location = (row[1], row[2])
             return location
 
 
