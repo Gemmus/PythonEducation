@@ -17,49 +17,41 @@ import random
 
 
 class Race:
-    def __init__(self, plate, current_speed, kilometer=0):
-        self.plate = plate
+    def __init__(self, registration_number, current_speed, travelled_distance=0):
+        self.registration_number = registration_number
         self.current_speed = current_speed
-        self.odometer = kilometer
+        self.travelled_distance = travelled_distance
 
-    def acceleration(self, change):
-        self.current_speed += change
+    def accelerate(self, change_of_speed):
+        self.current_speed += change_of_speed
         if self.current_speed < 100:
             self.current_speed = 100
         elif self.current_speed > 200:
             self.current_speed = 200
         return self.current_speed
 
-    def get_speed(self):
-        return self.current_speed
-
-    def path(self, path):
-        self.odometer += path
-        return self.odometer
+    def drive(self, addition):
+        self.travelled_distance += addition
+        return self.travelled_distance
 
 
-# main programme:
 car_list = []
-a = 1
+plate_number = 1
 for i in range(10):
-    b = int(random.uniform(100, 200))
-    car = Race(a, b)
-    car_list.append(car)
-    a += 1
-#    print(car.current_speed)
-#    print(car.plate)
+    speed = random.randint(100, 200)
+    new_car = Race(plate_number, speed)
+    car_list.append(new_car)
+    plate_number += 1
 
 race_over = False
 circle = 1
 while not race_over:
     print("\nRound " + str(circle) + ":")
     for car in car_list:
-        change_of_speed = int(random.uniform(-10, +15))
-#        print("starting speed: " + str(car.GetSpeed()))
-        speed = car.acceleration(change_of_speed)
-#        print("accelerated speed: " + str(speed))
-        distance = car.path(speed)
-        print("[ABC-" + str(car.plate) + "] speed: " + str(speed) + " km/h  distance: " + str(distance) + " km")
+        acceleration = random.randint(-10, +15)
+        speed = car.accelerate(acceleration)
+        distance = car.drive(speed)
+        print("[ABC-" + str(car.registration_number) + "] speed: " + str(speed) + " km/h  distance: " + str(distance) + " km")
         if distance >= 10000:
             race_over = True
     circle += 1
