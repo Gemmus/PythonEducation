@@ -9,15 +9,15 @@
 # Finally, use the emergency brake by forcing a -200 km/h change on the speed and then print out the final speed.
 # The travelled distance does not have to be updated yet.
 
-class Vehicle:
-    def __init__(self, plate, maximum_speed, current_speed=0, distance=0):
-        self.plate = plate
+class Car:
+    def __init__(self, registration_number, maximum_speed, current_speed=0, travelled_distance=0):
+        self.registration_number = registration_number
         self.maximum_speed = maximum_speed
         self.current_speed = current_speed
-        self.distance = distance
+        self.travelled_distance = travelled_distance
 
-    def change_of_speed(self, change):
-        self.current_speed += change
+    def accelerate(self, change_of_speed):
+        self.current_speed += change_of_speed
         if self.current_speed < 0:
             self.current_speed = 0
         elif self.current_speed > self.maximum_speed:
@@ -25,19 +25,17 @@ class Vehicle:
         return
 
 
-car = Vehicle("ABC-123", 142)
-car.change_of_speed(+30)
-print(f"{car.current_speed:d}")
-car.change_of_speed(+70)
-print(f"{car.current_speed:d}")
-car.change_of_speed(+50)
-
+car1 = Car("ABC-123", 142)
+car1.accelerate(+30)
+# print(f"{car1.current_speed} km/h")
+car1.accelerate(+70)
+# print(f"{car1.current_speed} km/h")
+car1.accelerate(+50)
 print(f"""
-The car with the registration plate {car.plate:s} has the maximum speed of {car.maximum_speed:d} km/h.
-The current speed is {car.current_speed:d} km/h.""")
+The car with the registration plate {car1.registration_number:s} has the maximum speed of {car1.maximum_speed:d} km/h.
+The current speed is {car1.current_speed:d} km/h and has travelled {car1.travelled_distance:d} km.""")
 
-car.change_of_speed(-200)
-
+car1.accelerate(-200)
 print(f"""
-The car with the registration plate {car.plate:s} has the maximum speed of {car.maximum_speed:d} km/h.
-The current speed is {car.current_speed:d} km/h.""")
+The car with the registration plate {car1.registration_number:s} has the maximum speed of {car1.maximum_speed:d} km/h.
+The current speed is {car1.current_speed:d} km/h and has travelled {car1.travelled_distance:d} km.""")
