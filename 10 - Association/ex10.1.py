@@ -8,31 +8,45 @@
 # tell it to move to a floor of your choice and then back to the bottom floor.
 
 class Elevator:
-    def __init__(self, bottom=1, top=10, current=1):
-        self.bottom = bottom
-        self.top = top
-        self.current = current
+    def __init__(self, current=1, bottom=1, top=50):
+        self.current_floor = current
+        self.bottom_floor = bottom
+        self.top_floor = top
 
     def go_to_floor(self, floor):
-        if self.bottom <= floor <= self.top:
-            self.current = floor
-        return self.current
+        if self.bottom_floor <= floor <= self.top_floor:
+            if floor > self.current_floor:
+                numbers_of_floor = floor - self.current_floor
+                for i in range(numbers_of_floor):
+                    self.floor_up()
+            if floor < self.current_floor:
+                numbers_of_floor = self.current_floor - floor
+                for i in range(numbers_of_floor):
+                    self.floor_down()
+        return
 
     def floor_up(self):
-        if self.current < self.top:
-            self.current += 1
-        return self.current
+        if self.current_floor < self.top_floor:
+            self.current_floor += 1
+        print(f"Floor {self.current_floor}")
+        return self.current_floor
 
     def floor_down(self):
-        if self.current > self.bottom:
-            self.current -= 1
-        return self.current
+        if self.current_floor > self.bottom_floor:
+            self.current_floor -= 1
+        print(f"Floor {self.current_floor}")
+        return self.current_floor
 
 
-h = Elevator()
-print(h.go_to_floor(5))
-for i in range(3):
-    h.floor_up()
-print(h.current)
-print(h.floor_down())
-print(h.go_to_floor(10))
+elevator1 = Elevator()
+elevator1.go_to_floor(10)
+print("Arrived.\n")
+
+elevator1.floor_down()
+print("Arrived.\n")
+
+elevator1.floor_up()
+print("Arrived.\n")
+
+elevator1.go_to_floor(4)
+print("Arrived.\n")
