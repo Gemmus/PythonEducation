@@ -55,14 +55,21 @@ class Building:
 
 
 building1 = Building(3)
-new_floor = building1.run_elevator(2, 8)
+new_floor = building1.run_elevator(1, 8)
+print(f"Elevator 1 is at floor {new_floor}.")
+
+new_floor = building1.run_elevator(1, 5)
+print(f"Elevator 1 is at floor {new_floor}.")
+
+new_floor = building1.run_elevator(2, 3)
 print(f"Elevator 2 is at floor {new_floor}.")
 
-new_floor = building1.run_elevator(1, 3)
-print(f"Elevator 1 is at floor {new_floor}.")
+new_floor = building1.run_elevator(2, 6)
+print(f"Elevator 2 is at floor {new_floor}.")
 
 new_floor = building1.run_elevator(3, 10)
 print(f"Elevator 3 is at floor {new_floor}.")
 
 new_floor = building1.run_elevator(3, 4)
 print(f"Elevator 3 is at floor {new_floor}.")
+
