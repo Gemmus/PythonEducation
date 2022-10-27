@@ -10,10 +10,9 @@ def name_location(icao):
     cursor = connection.cursor()
     cursor.execute("SELECT ident, name, municipality FROM flying_around WHERE ident='" + icao + "'")
     result = cursor.fetchall()
-#    print(result)
     if cursor.rowcount > 0:
         for row in result:
-            print(f"The name of the airport is: {row[1]} and is located in: {row[2]}.")
+            print(f"{row[1]} is located in: {row[2]}.")
     return
 
 
