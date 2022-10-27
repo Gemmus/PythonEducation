@@ -40,13 +40,6 @@ class Elevator:
 
 elevator1 = Elevator()
 elevator1.go_to_floor(10)
-print("Arrived.\n")
-
 elevator1.floor_down()
-print("Arrived.\n")
-
 elevator1.floor_up()
-print("Arrived.\n")
-
 elevator1.go_to_floor(4)
-print("Arrived.\n")
