@@ -8,10 +8,10 @@
 # tell it to move to a floor of your choice and then back to the bottom floor.
 
 class Elevator:
-    def __init__(self, current=1, bottom=1, top=50):
-        self.current_floor = current
+    def __init__(self, bottom=1, top=50):
         self.bottom_floor = bottom
         self.top_floor = top
+        self.current_floor = bottom
 
     def go_to_floor(self, floor):
         if self.bottom_floor <= floor <= self.top_floor:
