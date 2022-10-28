@@ -32,16 +32,13 @@ class Elevator:
         print(f"Floor {self.current_floor}")
         return self.current_floor
 
-    def get_floor(self):
-        return self.current_floor
-
 
 class Building:
     def __init__(self, elevators=0, bottom=1, top=50):
-        self.list_of_elevators = []
+        self.num_of_elevators = elevators
         self.bottom_floor = bottom
         self.top_floor = top
-        self.num_of_elevators = elevators
+        self.list_of_elevators = []
         for i in range(elevators):
             elevator = Elevator(bottom, top)
             self.list_of_elevators.append(elevator)
@@ -55,7 +52,7 @@ class Building:
             self.list_of_elevators[i].go_to_floor(1)
 
 
-building1 = Building(4)
+building1 = Building(4, 1, 15)
 new_floor = building1.run_elevator(1, 8)
 print(f"Elevator 1 is at floor {new_floor}.")
 

@@ -39,9 +39,10 @@ class Elevator:
 
 class Building:
     def __init__(self, elevators=0, bottom=1, top=50):
-        self.list_of_elevators = []
+        self.num_of_elevators = elevators
         self.bottom_floor = bottom
         self.top_floor = top
+        self.list_of_elevators = []
         for i in range(elevators):
             elevator = Elevator(bottom, top)
             self.list_of_elevators.append(elevator)
