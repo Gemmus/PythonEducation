@@ -36,9 +36,6 @@ class Elevator:
         print(f"Floor {self.current_floor}")
         return self.current_floor
 
-    def get_floor(self):
-        return self.current_floor
-
 
 class Building:
     def __init__(self, elevators=0, bottom=1, top=50):
@@ -72,4 +69,3 @@ print(f"Elevator 3 is at floor {new_floor}.")
 
 new_floor = building1.run_elevator(3, 4)
 print(f"Elevator 3 is at floor {new_floor}.")
-
