@@ -1,23 +1,21 @@
-class Cat:
-    number_of_cats = 0
-
-    def __init__(self, name, birth_year, sound="Meow"):
+class Dog:
+    def __init__(self, name, age):
         self.name = name
-        self.birth_year = birth_year
-        self.sound = sound
-        Cat.number_of_cats += 1
+        self.age = age
 
-    def meow(self, times):
-        for i in range(times):
-            print(self.sound)
-        return
+    def get_name(self):
+        return self.name
+
+    def get_age(self):
+        return self.age
+
+    def set_age(self, age):
+        self.age = age
 
 
-cat1 = Cat("Tapio", 2012, "Prr prr")
-cat2 = Cat("Mirri", 2020)
-print(f"{cat1.name} was born in {cat1.birth_year}.")
-cat1.meow(2)
-print(f"{cat2.name} was born in {cat2.birth_year}.")
-cat2.meow(3)
-
-print(f"The number of cats in the list so far is: {Cat.number_of_cats}.")
+d1 = Dog("Toto", 4)
+print(d1.get_name(), d1.get_age())
+d2 = Dog("Minttu", 9)
+print(d2.get_name(), d2.get_age())
+d2.set_age(10)
+print(d2.get_name(), d2.get_age())
