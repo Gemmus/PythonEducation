@@ -1,38 +1,36 @@
-from random import randint
+class Student:
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade  # 0-100
+
+    def get_grade(self):
+        return self.grade
 
 
-class Car:
+class Course:
+    def __init__(self, name, max_students):
+        self.name = name
+        self.max_students = max_students
+        self.students = []
+        self.is_active = False
 
-    def __init__(self, registration_number, max_speed, current_speed=0, distance_travelled=0):
-        self.registration_number = registration_number
-        self.max_speed = max_speed
-        self.current_speed = current_speed
-        self.distance_travelled = distance_travelled
+    def add_student(self, student):
+        if len(self.students) < self.max_students:
+            self.students.append(student)
+            return True
+        return False
 
-    def accelerate(self, change_of_speed):
-        self.current_speed = self.current_speed + change_of_speed
-        if self.current_speed < 0:
-            self.current_speed = 0
-        elif self.current_speed > self.max_speed:
-            self.current_speed = self.max_speed
-        return
-
-    def drive(self, hours):
-        self.distance_travelled = self.distance_travelled + (hours * self.current_speed)
-        return
+    def get_average_grade(self):
+        pass
 
 
-cars = []
+s1 = Student("Tim", 19, 95)
+s2 = Student("Bill", 19, 75)
+s3 = Student("Jill", 19, 65)
 
-for x in range(1, 11):
-    registration_number = "ABC-" + str(x)
-    max_speed = randint(100, 200)
-    cars.append(Car(registration_number, max_speed))
-
-for car in cars:
-    while car.distance_travelled <= 10000:
-        car.accelerate(randint(-10, 15))
-        car.drive(1)
-
-for car in cars:
-    print(f"Registration number: {car.registration_number}, Maximum speed: {car.max_speed}, Current speed: {car.current_speed}, Distance travelled: {car.distance_travelled}.")
+course = Course("Science", 2)
+course.add_student(s1)
+course.add_student(s2)
+print(course.students)
+print(course.students[0].name)
