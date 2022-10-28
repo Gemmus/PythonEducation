@@ -39,7 +39,7 @@ class Elevator:
 
 
 elevator1 = Elevator()
-elevator1.go_to_floor(10)
+elevator1.go_to_floor(8)
 elevator1.floor_down()
 elevator1.floor_up()
 elevator1.go_to_floor(4)
