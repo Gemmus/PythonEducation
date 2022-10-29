@@ -1,38 +1,43 @@
-class Pet:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+class Employee:
+    total_employees = 0
 
-    def show(self):
-        print(f"I am {self.name} and I am {self.age} years old.")
+    def __init__(self, first_name, last_name):
+        Employee.total_employees = Employee.total_employees + 1
+        self.employee_number = Employee.total_employees
+        self.first_name = first_name
+        self.last_name = last_name
 
-    def speak(self):
-        print("I don't know what to say.")
-
-
-class Cat(Pet):
-    def __init__(self, name, age, color):
-        super().__init__(name, age)
-        self.color = color
-
-    def speak(self):
-        print("Meow")
-
-    def show(self):
-        print(f"I am {self.name} and I am {self.age} years old and I am {self.color}.")
+    def print_information(self):
+        print(f"{self.employee_number}: {self.first_name} {self.last_name}")
 
 
-class Dog(Pet):
-    def speak(self):
-        print("Bark")
+class HourlyPaid(Employee):
+
+    def __init__(self, first_name, last_name, hourly_pay):
+        self.hourly_pay = hourly_pay
+        super().__init__(first_name, last_name)
+
+    def print_information(self):
+        super().print_information()
+        print(f"Hourly pay: {self.hourly_pay}")
 
 
-p = Pet("Bubbles", 7)
-p.show()
-p.speak()
-c = Cat("Tapio", 10, "tabby")
-c.show()
-c.speak()
-d = Dog("Minttu", 6)
-d.show()
-d.speak()
+class MonthlyPaid(Employee):
+
+    def __init__(self, first_name, last_name, monthly_pay):
+        self.monthly_pay = monthly_pay
+        super().__init__(first_name, last_name)
+
+    def print_information(self):
+        super().print_information()
+        print(f"Monthly pay: {self.monthly_pay}")
+
+
+employees = []
+employees.append(HourlyPaid("Viivi", "Virta", 12.35))
+employees.append(MonthlyPaid("Ahmed", "Habib", 2750))
+employees.append(Employee("Pekka", "Puro"))
+employees.append(HourlyPaid("Olga", "Glebova", 14.92))
+
+for e in employees:
+    e.print_information()
