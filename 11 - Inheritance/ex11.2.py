@@ -27,26 +27,17 @@ class Car:
             self.current_speed = self.maximum_speed
         return self.current_speed
 
-    def print_information(self):
-        print("pass")
-
 
 class ElectricCar(Car):
     def __init__(self, registration_number, maximum_speed, battery):
         super().__init__(registration_number, maximum_speed)
         self.battery = battery
 
-    def print_information(self):
-        print("pass")
-
 
 class GasolineCar(Car):
     def __init__(self, registration_number, maximum_speed, tank_volume):
         super().__init__(registration_number, maximum_speed)
         self.tank_volume = tank_volume
-
-    def print_information(self):
-        print("pass")
 
 
 ec1 = ElectricCar("ABC-15", 180, 52.5)   # 52.5 kWh
