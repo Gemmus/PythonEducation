@@ -25,6 +25,7 @@ class Car:
             self.current_speed = 0
         elif self.current_speed > self.maximum_speed:
             self.current_speed = self.maximum_speed
+#        print(self.current_speed)
         return self.current_speed
 
 
@@ -40,17 +41,17 @@ class GasolineCar(Car):
         self.tank_volume = tank_volume
 
 
-ec1 = ElectricCar("ABC-15", 180, 52.5)   # 52.5 kWh
-gc1 = GasolineCar("ACD-123", 165, 32.3)  # 32.3 l
-# Select speeds for both cars, make them drive for three hours and print out the values of their kilometer counters.
+ec1 = ElectricCar("ABC-15", 180, 52.5)
+gc1 = GasolineCar("ACD-123", 165, 32.3)
+
 hours = 1
 travelled_distance1 = travelled_distance2 = 0
 while hours < 4:
     travelled_distance1 += ec1.accelerate()
     travelled_distance2 += gc1.accelerate()
-    print(f"The electric car travelled {travelled_distance1}km during the period of {hours} hour(s).")
-    print(f"The gasoline car travelled {travelled_distance2}km during the period of {hours} hour(s).")
+    print(f"The electric car travelled {travelled_distance1} km during the period of {hours} hour(s).")
+    print(f"The gasoline car travelled {travelled_distance2} km during the period of {hours} hour(s).")
     hours += 1
 
-print(f"The electric car has travelled a total of {travelled_distance1}km.")
-print(f"The gasoline car has travelled a total of {travelled_distance2}km.")
+print(f"The electric car has travelled a total of {travelled_distance1} km.")
+print(f"The gasoline car has travelled a total of {travelled_distance2} km.")
