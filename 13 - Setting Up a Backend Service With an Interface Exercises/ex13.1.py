@@ -22,12 +22,10 @@ def prime_number():
                     break
     else:
         answer.insert(0, "false")
-
     response = {
         "Number": number,
         "isPrime": answer[0]
     }
-
     json.dumps(response, default=lambda o: o.__dict__, indent=4)
     return response
 
