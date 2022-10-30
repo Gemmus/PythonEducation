@@ -19,29 +19,28 @@ class Car:
         return
 
     def drive(self, number_of_hours):
-        for i in range(number_of_hours):
-            self.travelled_distance += self.current_speed
+        self.travelled_distance += self.current_speed * number_of_hours
         return
 
 
 car1 = Car("ABC-123", 142)
 car1.accelerate(+90)
-# print(f"{car1.current_speed} km/h * 5 hours")
-car1.drive(5)
+# print(f"{car1.current_speed} km/h * 5,3 hours")
+car1.drive(5.3)
 print(f"""
-The car with the registration plate {car1.registration_number:s} has the maximum speed of {car1.maximum_speed:d} km/h.
-The current speed is {car1.current_speed:d} km/h and has travelled {car1.travelled_distance:d} km.""")
+The car with the registration plate {car1.registration_number} has the maximum speed of {car1.maximum_speed} km/h.
+The current speed is {car1.current_speed} km/h and has travelled {car1.travelled_distance} km.""")
 
 car1.accelerate(-20)
 # print(f"\n{car1.current_speed} km/h * 10 hours")
 car1.drive(10)
 print(f"""
-The car with the registration plate {car1.registration_number:s} has the maximum speed of {car1.maximum_speed:d} km/h.
-The current speed is {car1.current_speed:d} km/h and has travelled {car1.travelled_distance:d} km.""")
+The car with the registration plate {car1.registration_number} has the maximum speed of {car1.maximum_speed} km/h.
+The current speed is {car1.current_speed} km/h and has travelled {car1.travelled_distance} km.""")
 
 car1.accelerate(+30)
 # print(f"\n{car1.current_speed} km/h * 200 hours")
 car1.drive(200)
 print(f"""
-The car with the registration plate {car1.registration_number:s} has the maximum speed of {car1.maximum_speed:d} km/h.
-The current speed is {car1.current_speed:d} km/h and has travelled {car1.travelled_distance:d} km.""")
+The car with the registration plate {car1.registration_number} has the maximum speed of {car1.maximum_speed} km/h.
+The current speed is {car1.current_speed} km/h and has travelled {car1.travelled_distance} km.""")
