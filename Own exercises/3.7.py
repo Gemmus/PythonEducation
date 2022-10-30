@@ -1,16 +1,18 @@
-import requests
+from flask import Flask, request
 
-keyword = input("Enter keyword: ")
+app = Flask(__name__)
 
-# Request template: https://api.tvmaze.com/search/shows?q=girls
-request = "https://api.tvmaze.com/search/shows?q=" + keyword
 
-try:
-    response = requests.get(request)
-    if response.status_code == 200:
-        json_response = response.json()
-        # print(json.dumps(json_response, indent=2))
-        for a in json_response:
-            print(a["show"]["name"])
-except requests.exceptions.RequestException as e:
-    print("Request could not be completed.")
+@app.route('/summary')
+def summary():
+    args = request.args
+    number1 = float(args.get("number1"))
+    number2 = float(args.get("number2"))
+    addition = number1+number2
+    return str(addition)
+
+
+if __name__ == '__main__':
+    app.run(use_reloader=True, host='127.0.0.1', port=5000)
+
+# http://127.0.0.1:5000/summary?number1=13&number2=29
