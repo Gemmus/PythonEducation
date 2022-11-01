@@ -27,13 +27,13 @@ class Elevator:
     def floor_up(self):
         if self.current_floor < self.top_floor:
             self.current_floor += 1
-        print(f"Floor {self.current_floor}")
+        print(f"Moving up. Floor {self.current_floor}")
         return self.current_floor
 
     def floor_down(self):
         if self.current_floor > self.bottom_floor:
             self.current_floor -= 1
-        print(f"Floor {self.current_floor}")
+        print(f"Moving down. Floor {self.current_floor}")
         return self.current_floor
 
 
