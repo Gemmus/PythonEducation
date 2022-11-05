@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/13 - Setting Up a Backend Service With an Interface Exercises/ex13.2.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/8 - Using Relational Databases/ex8.1.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/8 - Using Relational Databases/ex8.2.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/8 - Using Relational Databases/ex8.3.py" dialect="GenericSQL" />
+  </component>
+</project>
