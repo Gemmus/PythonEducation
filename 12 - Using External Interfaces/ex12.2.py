@@ -13,8 +13,14 @@ def get_weather(api, city):
 
     response = requests.get(url).json()
     temp = response['main']['temp']
-    celsius = temp - 273.15
-    print(f"It is currently {celsius:4.2f}°C in {city}.")
+    return temp - 273.15
 
 
-get_weather(api_key, city_name)
+def truncate(n, decimals=0):
+    multiplier = 10**decimals
+    return int(n*multiplier)/multiplier
+
+
+celsius_degree = get_weather(api_key, city_name)
+celsius = truncate(celsius_degree)
+print(f"It is currently {celsius:.0f}°C in {city_name}.")
