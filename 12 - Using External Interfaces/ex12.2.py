@@ -5,16 +5,12 @@
 import requests
 import math
 
-city_name = input("Please enter the municipality(City,CountryCode): ")
-api_key = "628dc836c467279560786b9ec5b2a731"
-
 
 def get_weather(api, city):
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api}"
-
     response = requests.get(url).json()
-    temp = response['main']['temp']
-    return temp - 273.15
+    temperature = response['main']['temp']
+    return temperature - 273.15
 
 
 def rounding(n, decimals=0):
@@ -22,6 +18,8 @@ def rounding(n, decimals=0):
     return math.floor(n*multiplier+0.5)/multiplier
 
 
+city_name = input("Please enter the municipality(City,CountryCode): ")
+api_key = "628dc836c467279560786b9ec5b2a731"
 celsius_degree = get_weather(api_key, city_name)
 # print(celsius_degree)
 celsius = rounding(celsius_degree)
