@@ -3,6 +3,7 @@
 # and then prints out the corresponding weather condition description text and temperature in Celsius degrees.
 
 import requests
+import math
 
 city_name = input("Please enter the municipality(City,CountryCode): ")
 api_key = "628dc836c467279560786b9ec5b2a731"
@@ -16,11 +17,12 @@ def get_weather(api, city):
     return temp - 273.15
 
 
-def truncate(n, decimals=0):
+def rounding(n, decimals=0):
     multiplier = 10**decimals
-    return int(n*multiplier)/multiplier
+    return math.floor(n*multiplier+0.5)/multiplier
 
 
 celsius_degree = get_weather(api_key, city_name)
-celsius = truncate(celsius_degree)
+# print(celsius_degree)
+celsius = rounding(celsius_degree)
 print(f"It is currently {celsius:.0f}°C in {city_name}.")
