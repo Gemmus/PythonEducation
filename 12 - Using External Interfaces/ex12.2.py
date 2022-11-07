@@ -9,8 +9,11 @@ import math
 def get_weather(api, city):
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api}"
     response = requests.get(url).json()
-    temperature = response['main']['temp']
-    return temperature - 273.15
+    print(response)
+    condition = response['weather'][0]['main']
+    temperature_kelvin = response['main']['temp']
+    temperature_celsius = temperature_kelvin - 273.15
+    return temperature_celsius, condition
 
 
 def rounding(n, decimals=0):
@@ -20,7 +23,7 @@ def rounding(n, decimals=0):
 
 city_name = input("Please enter the municipality(City,CountryCode): ")
 api_key = "628dc836c467279560786b9ec5b2a731"
-celsius_degree = get_weather(api_key, city_name)
+celsius_degree, weather_condition = get_weather(api_key, city_name)
 # print(celsius_degree)
 celsius = rounding(celsius_degree)
-print(f"It is currently {celsius:.0f}°C in {city_name}.")
+print(f"It is currently {celsius:.0f}°C and the weather condition is: {weather_condition} in {city_name}.")
