@@ -9,7 +9,7 @@ import math
 def get_weather(api, city):
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api}"
     response = requests.get(url).json()
-    print(response)
+#     print(response)
     condition = response['weather'][0]['main']
     temperature_kelvin = response['main']['temp']
     temperature_celsius = temperature_kelvin - 273.15
