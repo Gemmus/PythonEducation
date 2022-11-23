@@ -40,7 +40,7 @@ car_list = []
 plate_number = 1
 for i in range(10):
     random_max_speed = random.randint(100, 200)
-    initial_speed = random.randint(100, random_max_speed)
+    initial_speed = random.randint(90, random_max_speed)
     car = Car(plate_number, random_max_speed, initial_speed)
     car_list.append(car)
     plate_number += 1
