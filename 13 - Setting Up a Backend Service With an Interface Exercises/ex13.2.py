@@ -14,7 +14,7 @@ app = Flask(__name__)
 @app.route('/airport')
 def airport():
     argument = request.args
-    code = (argument.get("code"))
+    code = argument.get("code")
     cursor = connection.cursor()
     cursor.execute("SELECT ident, name, municipality FROM flying_around WHERE ident='" + code + "'")
     result = cursor.fetchall()
