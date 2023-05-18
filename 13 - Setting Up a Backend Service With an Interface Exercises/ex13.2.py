@@ -25,7 +25,7 @@ def airport():
                 "Name": row[1],
                 "Location": row[2]
             }
-            json.dumps(response, default=lambda o: o.__dict__, indent=4)
+            json.dumps(response, indent=4)
             return response
 
 
